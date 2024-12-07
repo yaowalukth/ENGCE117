@@ -1,16 +1,19 @@
 #include <stdio.h>
+#include <string.h>
 
-int *GetSet( int *num ) ;
+void GetSet( int [] , int * ) ;
+
 int main() {
-    int *data, num ;
-    data = GetSet( &num ) ;
+    int data[1000] , num ;
+    GetSet( data , &num ) ;
     return 0 ;
 }//end function
 
-int *GetSet( int *num ) {
-    printf( "Enter the number of elements: " ) ;
+void GetSet( int data[] , int *num ) {
+    printf( " " ) ;
     scanf( "%d", num ) ;
-    printf( "Enter the elements: " ) ;
-    scanf( "%d", *(num) ) ;
-    return GetSet( int *num ) ;
+    for( int i = 0 ; i < *num ; i ++ ) {
+        printf( " " ) ;
+        scanf( "%d", &data[i] ) ;
+    }//end for loop
 }//end function
