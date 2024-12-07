@@ -1,25 +1,25 @@
 #include <stdio.h>
 
-int *GetSet( int *num ) ;
+int *GetSet( int *num , int set[] ) ;
 
-int main() {
-    int num ;
-    GetSet( &num ) ;
-    return 0 ;
-}//end function
-
-int *GetSet( int *num ) {
-    int data[ 500 ] ;
+int *GetSet( int *num , int set[] ) {
     printf( "Enter the number of elements: " ) ;
     scanf( "%d", num ) ;
     for( int i = 0 ; i < *num ; i ++ ) {
-        printf( "Enter the elements [ %d ]: ", i + 1 ) ;
-        scanf( "%d", &data[ i ] ) ;
+        printf( "Enter the elements: " ) ;
+        scanf( "%d", &set[i] ) ;
     }//end for loop
+    return set ;
+}//end function
 
-    printf( "Number of elements : %d\n", *num ) ;
-    for( int i = 0 ; i < *num ; i ++ ) {
-        printf( "%d ", data[ i ] ) ;
+int main() {
+    int *data , num , set[100] ;
+    data = GetSet( &num , set ) ;
+    printf( "\n" ) ;
+    printf( "Number of elements: %d \n", num ) ;
+    for( int i = 0 ; i < num ; i ++ ) {
+        printf( "%d ", data[i] ) ;
     }//end for loop
+    delete [] data ;
     return 0 ;
 }//end function
