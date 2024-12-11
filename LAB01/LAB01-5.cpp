@@ -1,4 +1,4 @@
-include <stdio.h>
+#include <stdio.h>
 
 void GetMatrix( int value[] , int *row , int *col ) {
     int result = (*row) * (*col) ;
