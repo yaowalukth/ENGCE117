@@ -46,16 +46,16 @@ int main() {
             printf( "D+" ) ;
             break ;
         case 12 :
-            printf( "C+" ) ;
-            break ;
-        case 13 :
             printf( "C" ) ;
             break ;
+        case 13 :
+            printf( "C+" ) ;
+            break ;
         case 14 :
-            printf( "B+" ) ;
+            printf( "B" ) ;
             break ;
         case 15 :
-            printf( "B" ) ;
+            printf( "B+" ) ;
             break ;
         case 16 :
         case 17 :
