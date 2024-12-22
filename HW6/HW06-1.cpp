@@ -1,4 +1,3 @@
-
 /*
     ผู้ใช้กรอกจำนวนตัวเลข เพื่อพิมพ์คำว่า "Hello World" ตามจำนวนบรรทัดที่ผู้ใช้กรอก
     หากผู้ใช้กรอกเลขคี่ ให้แสดงเลขบรรทัดโดยใช้ []
@@ -31,3 +30,18 @@
         [7] Hello World
 
 */
+#include <stdio.h>
+
+int main() {
+    int num ;
+    printf( " " ) ;
+    scanf( "%d", &num ) ;
+    for( int i = 0 ; i < num ; i ++ ) {
+        if( num % 2 == 0 ) {
+            printf( "(%d) Hello World \n", i + 1 ) ;
+        } else {
+            printf( "[%d] Hello World \n", i + 1 ) ;
+        }//end if - else
+    }//end for loop
+    return 0 ;
+}//end function
